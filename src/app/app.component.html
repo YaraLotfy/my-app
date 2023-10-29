@@ -1,14 +1,42 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <button class="red-button">
   <i class="bi bi-trash" style="color: black;"></i>حذف المورد
 </button>
-<button class="black-button">حفظ التغييرات</button>
-<div class="form-check form-switch">
-  <input
-    mdbCheckbox
-    class="form-check-input"
-    type="checkbox"
-    value=""
-    id="flexSwitchCheckDefault"
-  />
-  <label class="form-check-label" for="flexSwitchCheckDefault"> Default switch </label>
-</div>
+<button class="black-button">حفظ التغييرات</button><br><br>
+
+  
+
+<body ng-app="">
+  
+  <div dir="rtl" lang="ar">
+  <div ng-app="myApp" ng-controller="formCtrl">
+    <form>
+      اسم الموارد: <input type="text" ng-model="firstname">
+    </form>
+  </div>
+  
+  <script>
+  var app = angular.module('myApp', []);
+  app.controller('formCtrl', function($scope) {
+      $scope.firstname = "هيثم محمد";
+  });
+  
+  </script>
+  <br>
+
+  <form>
+    اختر نوع المورد:
+    <input type="radio" ng-model="myVar" value="1">حجز خلال اليوم
+    <input type="radio" ng-model="myVar" value="2">حجز مدة(اكثر من يوم)
+  
+  </form>
+  <div ng-switch="myVar">
+    <div ng-switch-when="1">
+       
+    </div>
+    <div ng-switch-when="2">
+       
+    </div>
+  </div>
+  </div>
+  </body>

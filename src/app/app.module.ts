@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -14,9 +15,11 @@ import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MdbCheckboxModule
+    MdbCheckboxModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
