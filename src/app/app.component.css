@@ -1,0 +1,16 @@
+.red-button {
+    background-color: red;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    opacity: 40%;
+    border-radius: 5px;
+    
+}
+.black-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
