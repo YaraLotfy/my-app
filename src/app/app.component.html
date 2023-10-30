@@ -20,7 +20,7 @@
 <body ng-app="">
   
   <div dir="rtl" lang="ar">
-    
+    <div class="container">
     <div class="row">
       
       <div class="small-12 medium-2 large-2 columns">
@@ -59,8 +59,8 @@
    <br><br><br>
   <div ng-app="myApp" ng-controller="formCtrl">
     <form>
-      
-      اسم الموارد: <input type="text" ng-model="firstname">
+      <label for="">اسم الموارد:</label>
+       <input type="text" ng-model="firstname">
     </form>
   </div>
   
@@ -75,9 +75,10 @@
 
   <form>
     اختر نوع المورد:
-    <input type="radio" ng-model="myVar" value="1">حجز خلال اليوم
-    <input type="radio" ng-model="myVar" value="2">حجز مدة(اكثر من يوم)
-  
+    <input type="radio" ng-model="myVar" value="1">
+    <label>حجز خلال اليوم</label>
+    <input type="radio" ng-model="myVar" value="2">
+    <label>حجز مدة(اكثر من يوم)</label>
   </form>
   <div ng-switch="myVar">
     <div ng-switch-when="1">
@@ -87,13 +88,16 @@
        
     </div>
   </div>
-  <div class="container">
+</div>
+  <div >
     <form>
       
-      المورد متاح الى
+      
       <br><br>
-      <div class="dropdown">
-      <select name="month" id="month">
+      <div class="container1" >
+        <label for="">المورد متاح الى</label>
+      <br>
+      <select class="dropdown" name="month" id="month">
         <option value="jan">1</option>
         <option value="feb">2</option>
         <option value="march">3</option>
@@ -112,5 +116,77 @@
       
     </form>
   </div>
+  
+    
+  
+  </div>
+  <div class="container2">
+    <form>
+      <h1 class="s">حدد مواعيد العمل للمورد</h1>
+      <h6>تكوين إعدادات الأسبوع الخاص بك هنا. ما عليك سوى تحريك أشرطة التمرير وإضافة/ إزالة أوقات الراحة لإعداد ساعات العمل</h6><br>
+      <label class="text" for="appt-time">   السبت  </label>
+      <label class="switch3" >
+        <input type="checkbox">
+        <span class="slider round"> </span>
+      </label>
+      <br>
+      <label >  وقت البدء</label>
+      <label class="one" >  وقت الانتهاء</label>
+      <br>
+      <input  id="appt-time" type="time" name="appt-time" /> 
+      <input class="one" id="appt-time" type="time" name="appt-time" />
+      <label for="appt-time">   الاحد  </label>
+      <label class="switch2" >
+        <input type="checkbox">
+        <span class="slider round"> </span>
+      </label>
+      <br>
+      <input id="appt-time" type="time" name="appt-time" />
+      <input class="one" id="appt-time" type="time" name="appt-time" />
+      <br>
+      <input id="appt-time" type="time" name="appt-time" />
+      <input class="one" id="appt-time" type="time" name="appt-time" />
+      <br>
+      <input  id="appt-time" type="time" name="appt-time" />
+      <input class="one" id="appt-time" type="time" name="appt-time" />
+      <label for="appt-time">   الاثنين  </label>
+      <label class="switch2" >
+        <input type="checkbox">
+        <span class="slider round"> </span>
+      </label>
+      <br>
+      <input  id="appt-time" type="time" name="appt-time" />
+      
+      <input class="one" id="appt-time" type="time" name="appt-time" />
+      <label for="appt-time">   الثلاثاء  </label>
+      <label class="switch2" >
+        <input type="checkbox">
+        <span class="slider round"> </span>
+      </label>
+      <br>
+      <input  id="appt-time" type="time" name="appt-time" />
+      <input class="one" id="appt-time" type="time" name="appt-time" />
+      <label for="appt-time">   الاربعاء  </label>
+      <label class="switch2" >
+        <input type="checkbox">
+        <span class="slider round"> </span>
+      </label>
+      <br>
+      <input  id="appt-time" type="time" name="appt-time" />
+      <input class="one" id="appt-time" type="time" name="appt-time" />
+      <label for="appt-time">   الخميس  </label>
+      <label class="switch2" >
+        <input type="checkbox">
+        <span class="slider round"> </span>
+      </label>
+      <br>
+      <label  class="text" for="appt-time">   الجمعة  </label>
+      <label class="switch3" >
+        <input type="checkbox">
+        <span class="slider round"> </span>
+      </label>
+      <br>
+      
+    </form>
   </div>
   </body>
