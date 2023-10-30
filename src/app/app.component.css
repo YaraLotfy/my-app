@@ -23,9 +23,25 @@
     display: inline-block;
     width: 60px;
     height: 34px;
-    margin-left: 25px;
+    margin-left: 30px;
+    margin-bottom: 50px;
   }
-  
+  .switch2 {
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    height: 34px;
+    margin-left: 85px;
+    margin-bottom: 20px;
+  }
+  .switch3 {
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    height: 34px;
+    margin-left: 95px;
+    margin-bottom: 20px;
+  }
   .switch input { 
     opacity: 0;
     width: 0;
@@ -116,7 +132,27 @@ img {
   transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
   color: #999;
 }
-.container{
+.container1{
     margin-right: 925px;
-    top: 20px;
+    top: 100px;
+}
+.container2{
+  margin-left: 950px;
+  
+}
+.dropdown{
+  width: 100px;
+    height: 34px;
+}
+input.one{
+  margin: 15px;
+}
+label.text{
+  margin-left: 215px;
+}
+label.one{
+  margin: 40px;
+}
+h1.s{
+  margin-left: 170px;
 }
