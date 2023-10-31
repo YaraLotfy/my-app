@@ -1,6 +1,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <button class="btn"> حذف المورد <i class="fa fa-trash"></i></button>
@@ -20,6 +21,7 @@
 <body ng-app="">
   
   <div dir="rtl" lang="ar">
+    
     <div class="container">
     <div class="row">
       
@@ -96,7 +98,7 @@
       <br><br>
       <div class="container1" >
         <label for="">المورد متاح الى</label>
-      <br>
+      <br><br>
       <select class="dropdown" name="month" id="month">
         <option value="jan">1</option>
         <option value="feb">2</option>
@@ -111,6 +113,52 @@
         <option value="nov">11</option>
         <option value="dec">12</option>
       </select>
+      <select class="dropdown" name="month" id="month">
+        <option value="jan">يناير</option>
+        <option value="feb">فبراير</option>
+        <option value="march">مارس</option>
+        <option value="april">ابريل</option>
+        <option value="may">مايو</option>
+        <option value="june">يونيو</option>
+        <option value="july">يوليو</option>
+        <option value="aug">اغسطس</option>
+        <option value="sep">سبتمبر</option>
+        <option value="oct">اكتوبر</option>
+        <option value="nov">نوفبر</option>
+        <option value="dec">ديسمبر</option>
+      </select>
+      <br><br>
+      <form>
+        <label for="">وقت المورد</label><br><br>
+        <input type="radio" ng-model="myVar" value="1">
+        <label>وقت الخدمة</label>
+        <input type="radio" ng-model="myVar" value="2">
+        <label>الوقت ثابت</label>
+      </form>
+      <div ng-switch="myVar">
+        <div ng-switch-when="1">
+           
+        </div>
+        <div ng-switch-when="2">
+           
+        </div>
+      </div>
+      <br><br>
+      <form>
+        <label for="">الحجز المتعدد</label><br><br>
+        <input type="radio" ng-model="myVar" value="1">
+        <label>حجز واحد فقط</label>
+        <input type="radio" ng-model="myVar" value="2">
+        <label>حجز اكثر من شخص لنفس الموعد   </label>
+      </form>
+      <div ng-switch="myVar">
+        <div ng-switch-when="1">
+           
+        </div>
+        <div ng-switch-when="2">
+           
+        </div>
+      </div>
     </div>
       
       
@@ -123,7 +171,7 @@
   <div class="container2">
     <form>
       <h1 class="s">حدد مواعيد العمل للمورد</h1>
-      <h6>تكوين إعدادات الأسبوع الخاص بك هنا. ما عليك سوى تحريك أشرطة التمرير وإضافة/ إزالة أوقات الراحة لإعداد ساعات العمل</h6><br>
+      <h6>تكوين إعدادات الأسبوع الخاص بك هنا ما عليك سوى تحريك أشرطة التمرير وإضافة/ إزالة أوقات الراحة لإعداد ساعات العمل</h6><br>
       <label class="text" for="appt-time">   السبت  </label>
       <label class="switch3" >
         <input type="checkbox">
@@ -133,6 +181,7 @@
       <label >  وقت البدء</label>
       <label class="one" >  وقت الانتهاء</label>
       <br>
+      <!-- <i class='fas fa-plus-circle' style='font-size:36px'></i> -->
       <input  id="appt-time" type="time" name="appt-time" /> 
       <input class="one" id="appt-time" type="time" name="appt-time" />
       <label for="appt-time">   الاحد  </label>
